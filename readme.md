@@ -9,9 +9,9 @@ Welcome to your comprehensive guide for conquering the AWS Certified Cloud Pract
 - ### [AWS Cloud Essentials](https://aws.amazon.com/getting-started/cloud-essentials/)
 
 
-## Author: {Type your name here}
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://emiliedionisio.github.io/) <!--Replace with your GitHub Page here -->
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/emdionisio/) <!--Replace with your LinkedIn Page here -->
+## Author: Christian Jimenez
+<!-- [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://emiliedionisio.github.io/) Replace with your GitHub Page here -->
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/christian-jimenez-542777102/) 
 
 ## AWS Cloud Practitioner Exam Details
 
