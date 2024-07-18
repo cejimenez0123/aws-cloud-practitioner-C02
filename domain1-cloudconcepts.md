@@ -34,6 +34,7 @@ Cloud computing is the on-demand delivery of IT resources over the internet with
 ###   What is a Load Balancer?
 ###    What is the primary purpose of AWS Regions in the global infrastructure?
 ### Describe the function of Amazon CloudFront in AWS's architecture.
+  - Data distrubuted globally so information that far away from customer can be cached closer to the customer.
 ###    How do AWS Edge locations enhance the performance of Amazon CloudFront?
 ### Explain how Amazon Route 53 integrates with AWS Edge locations to enhance user experiences.
 ### What are the advantages of using AWS Outposts for local data processing needs?
@@ -54,13 +55,19 @@ Cloud computing is the on-demand delivery of IT resources over the internet with
 ### What is AWS Outposts?
 ### How do Availability Zones within AWS Regions contribute to disaster recovery and high availability?
 ### How do AWS Edge locations and Amazon CloudFront improve content delivery?
+  Edge Locations cache resources closer to custoemers so they get information quicker.
 ### What is an API in the context of AWS?
+Application Programming Interface, predertermined way to interact with AWS services
+ex. Launch EC2 instance
 ### What is the primary method of interacting with AWS services?
+
 ### What are the main ways to interact with AWS services?
 ### Why is automation important in cloud deployment?
 ### What is the primary advantage of using AWS Elastic Beanstalk over manual methods like the AWS Management Console?
 ### What is AWS Elastic Beanstalk used for?
+Elastic Beanstalk is a service for deploying and scaling web applications and services. Upload your code and Elastic Beanstalk automatically handles the deployment—from capacity provisioning, load balancing, and auto scaling to application health monitoring.
 ### How does AWS CloudFormation help in managing AWS resources?
+With CloudFormation we can modify and update the resources in your existing stacks in a controlled and predictable way. By using templates to manage your stack changes, you have the ability to apply version control to your AWS infrastructure just as you do with the software running on it.
 ### What are the main components of AWS Global Infrastructure?
 ### Which AWS services automatically run across multiple Availability Zones?
 ### What is the recommended best practice for deploying infrastructure in AWS?
