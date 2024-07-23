@@ -30,8 +30,49 @@ Cloud computing is the on-demand delivery of IT resources over the internet with
 
 
 ### What are the Benefits of cloud computing and their definitions?
+  - Trade fixed expense for variable expense – Instead of having to invest heavily in data centers and servers before you know how you’re going to use them, you can pay only when you consume computing resources, and pay only for how much you consume.
+
+  - Benefit from massive economies of scale – By using cloud computing, you can achieve a lower variable cost than you can get on your own. Because usage from hundreds of thousands of customers is aggregated in the cloud, providers such as AWS can achieve higher economies of scale, which translates into lower pay as-you-go prices.??? Lower cost per indivdual user?
+
+  - Stop guessing capacity – No longer worry if you have high enough infrastructure capaciy, no idle resources when it is not being used. Able to scale up in a few minutes.
+
+  - Increase speed and agility – In a cloud computing environment, new IT resources are only a click away, which means that you reduce the time to make those resources available to your developers from weeks to just minutes. This results in a dramatic increase in agility for the organization, since the cost and time it takes to experiment and develop is significantly lower. ???
+
+  - Stop spending money running and maintaining data centers – Focus on projects that differentiate you, rather than the infrastructure everyone needs like servers.
+
+  - Go global in minutes – Low latency across the globe. Better experience at minimal cost to users.
+
 ###    What are the Amazon EC2 instance types and their definitions?
+Instance types are the combination of features like CPU, memory, and storage that let you provide an optimize when to recieve resources.
+
+???How is instance when it is part of the desktop. Instance vs AMI?
+
+- General Purpose Instances
+  - These instances offer a balanced mix of CPU, memory, storage, and networking resources, making them suitable for a wide range of applications.
+
+    M7g, M6i, M6g, M5, M4, T4g, T3, T2: Popular choices for web servers, small to medium-sized databases, and development environments.
+
+- Compute Optimized Instances
+  - Prioritize raw compute power for applications demanding high CPU performance.
+Ideal for batch processing, scientific simulations, and video encoding.
+
+- Memory Optimized Instances
+  - Designed for applications requiring large amounts of memory.
+ Well-suited for in-memory databases, real-time data processing, and analytics.
+ Whats an example of real time data processing?
+
+- Storage Optimized Instances
+  - Optimized for workloads that require high performance storage.
+
+     Ideal for databases, data warehousing, and big data analytics.
+     What's an example of big data
+
+- Accelerated Computing Instances
+ - Provide specialized hardware acceleration for specific workloads.
+ Suitable for machine learning, deep learning, high-performance computing, and graphics-intensive applications.
+
 ###   What is a Load Balancer?
+Evenly distributes traffic between servers
 ###    What is the primary purpose of AWS Regions in the global infrastructure?
 ### Describe the function of Amazon CloudFront in AWS's architecture.
   - Data distrubuted globally so information that far away from customer can be cached closer to the customer.
