@@ -74,12 +74,44 @@ Ideal for batch processing, scientific simulations, and video encoding.
 ###   What is a Load Balancer?
 Evenly distributes traffic between servers
 ###    What is the primary purpose of AWS Regions in the global infrastructure?
+ AWS Regions offer low latency, low packet loss(data fidelity, what is sent arrives), and high overall network quality.
+
 ### Describe the function of Amazon CloudFront in AWS's architecture.
   - Data distrubuted globally so information that far away from customer can be cached closer to the customer.
 ###    How do AWS Edge locations enhance the performance of Amazon CloudFront?
+When a user requests content that you're serving with CloudFront, the request is routed to the edge location that provides the lowest latency (time delay), so that content is delivered with the best possible performance.
 ### Explain how Amazon Route 53 integrates with AWS Edge locations to enhance user experiences.
-### What are the advantages of using AWS Outposts for local data processing needs?
+Route 53, a ?highly scalable DNS(router to other servers/domain/web pages) web service, acts as the traffic manager, directing users to the appropriate edge location based on various factors, including:
+
+    Geographic location: Users are directed to the closest edge location for minimal latency.
+    Health checks: Route 53 continuously monitors the health of edge locations and redirects traffic if an issue arises.
+    Traffic distribution: Load balancing can be implemented to distribute traffic evenly across multiple edge locations.
+###  
 ### How are AWS Lambda and AWS Outposts different in what they offer for cloud computing?
+
+AWS Lambda 
+  - Severless Computing
+    - No need to provision servers. Only pay when used.
+  - Event Driven
+    - Lambda responds to events such as change data in S3 bucket, updates to a DynamoDB table, or HTTP requests via Amazon Gateway 
+    Amazon Gateway?(API)
+  - Automatic Scaling
+    - Scales precise with the workload. Runs in response to each individual trigger
+  - Short lived tasks
+    - Best suited for short lived tasks
+  - Usage Model
+    - Pay only for what you use
+
+AWS Outposts
+  - Hybrid Cloud
+    - AWS infrastructure are extended to any center,co-location, or on premises in limited space or smaller capacity requirements
+  - On-Premises Deployment
+    - low latency access to on-premises systems, local data processing, or the need to comply with **data residency requirements**.
+  - Consistent AWS experiences
+    - Same AWS hardware and software infrastructure. Able to use **AWS services, APIs, and tools on-premises**
+  - Longer Term Workloads
+    - **Suitable for extended workloads or require significant on premises infrastructure**
+  - Usage Model
 ### What is high availability?
 ### What are the benefits of AWS having a global infrastructure with multiple regions?
 ### What is an AWS Region?
