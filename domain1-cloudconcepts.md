@@ -90,6 +90,7 @@ Route 53, a ?highly scalable DNS(router to other servers/domain/web pages) web s
 ### How are AWS Lambda and AWS Outposts different in what they offer for cloud computing?
 
 AWS Lambda 
+**AWS Lambda is ideal for serverless, event-driven computing tasks that need to scale automatically and are short-lived.**
   - Severless Computing
     - No need to provision servers. Only pay when used.
   - Event Driven
@@ -103,6 +104,7 @@ AWS Lambda
     - Pay only for what you use
 
 AWS Outposts
+**AWS Outposts is perfect for enterprises looking for a consistent AWS hybrid cloud experience, with applications that need to remain on-premises for compliance, low latency, or local data processing.**
   - Hybrid Cloud
     - AWS infrastructure are extended to any center,co-location, or on premises in limited space or smaller capacity requirements
   - On-Premises Deployment
@@ -112,14 +114,45 @@ AWS Outposts
   - Longer Term Workloads
     - **Suitable for extended workloads or require significant on premises infrastructure**
   - Usage Model
+    - Purchasing hardware commiting to a usage model similar on premises, but they have AWS tools and infrastructure 
 ### What is high availability?
+  Managing of large workloads efficently for extended periods of time
 ### What are the benefits of AWS having a global infrastructure with multiple regions?
+  - **Low Latency**
+    - Built close to end users
+  - **Disaster Recovery and fault tolerance**
+    - Fail over - if one location fails, resources are available at another location
+    - Geographical Redundancy - if one region fails, can continue to work at other regions
 ### What is an AWS Region?
+  A geographical area with multiple availability zones(locations of centers)
 ### Why is data sovereignty important in AWS Regions?
+  - Compliance with local laws
+    - Some industried are required to keep information within the country
+  - Data Privacy
+    - Protection from foreign gov't
+    - Avoid cross border transfers
+  - Data Control and Security
+    - Country specific security measures
+  - Reliability and Availability
+    - Closer to organizations for performance and disaster recovery
 ### How do AWS Regions enhance disaster recovery capabilities?
+  - Geographical Redundacy
 ### What are the four main factors to consider when choosing an AWS Region?
-### What is an AWS Availability Zone?
-### What is the purpose of having multiple Availability Zones within an AWS Region?
+  - **Compliance**
+  - Latency 
+    - Reduced network latency imporves user experience
+  - Cost
+    - Some regions have lower cost than others
+  - Services and features 
+    - New features are rolled out gradually to new regions
+### What is an AWS Availability Zone? 
+  - A data center
+### What is the purpose of having multiple Availability Zones within an AWS Region? 
+  - **High Availability**
+  - **Fault Isolation**
+  - **Cost Efficency**
+    - Spreading usage across availability zones, has potentional to reduce costs by optimizing resources
+  - **Compliance and Data Residency**
 ### How does AWS ensure low latency communication between Availability Zones?
 ### Why is it important to run EC2 instances across multiple AZs?
 ### How do regional AWS services enhance high availability?
