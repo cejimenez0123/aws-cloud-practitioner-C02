@@ -59,7 +59,7 @@ Ideal for batch processing, scientific simulations, and video encoding.
 - Memory Optimized Instances
   - Designed for applications requiring large amounts of memory.
  Well-suited for in-memory databases, real-time data processing, and analytics.
- Whats an example of real time data processing?
+ 
 
 - Storage Optimized Instances
   - Optimized for workloads that require high performance storage.
@@ -70,7 +70,7 @@ Ideal for batch processing, scientific simulations, and video encoding.
 - Accelerated Computing Instances
  - Provide specialized hardware acceleration for specific workloads.
  Suitable for machine learning, deep learning, high-performance computing, and graphics-intensive applications.
-
+Whats an example of real time data processing?
 ###   What is a Load Balancer?
 Evenly distributes traffic between servers
 ###    What is the primary purpose of AWS Regions in the global infrastructure?
@@ -155,20 +155,80 @@ AWS Outposts
   - **Compliance and Data Residency**
 ### How does AWS ensure low latency communication between Availability Zones?
 ### Why is it important to run EC2 instances across multiple AZs?
+  - **High Availability**
+    - If an AZ goes down, application remains available
+    - **Load Balancing** balance traffic among healthy instances, ensuring consistent availability, and experience
+  - **Scalability**
+    - 
+  - **Fault Tolerance**
+    - AZ are isolated from each other
+    - Redundancy: If one AZ fails others can takes the load
+  - Disaster Recovery
+  - Improved Performance
+    - **Optimize resources** across regions with load balancer
+      - Handle traffic spike efficently
+      
 ### How do regional AWS services enhance high availability?
+  - **Elastic Load Balancing between multiple AZ**
+  - **Autoscaling: Adjusts based on active instances.** Helps maintain performance and availability during traffic spikes or failure at a specific AZ. 
+  - **Cross region replication** AWS S3,RDS, and DynamoDB. Replicate data across different regions. Can failover(move traffic to a instance in case of regional outage)
 ### What is the purpose of Amazon CloudFront?
+  - Cloudfront is a CDN ( content delivery network.) Reduce latency by migrating data to a region closer to users. Deliver web pages, images, video  to users with low latency.
+  - **Caching frequently acceseed resources closer to users**
 ### What are edge locations in AWS?
+  - **Protection from DDoS attacks with AWS Shield**
+  - **Cloudfront offers encryption for ssl/tls and https.** Offers feattures
+  like AWS WAF( Web Application Firewall)
+  - **Content access controls**
+  - Made to handle traffic spikes without impacting performance
 ### What is AWS Outposts?
+  - **Outposts let's organization run AWS resources on premises would in cloud**
+    - **Hybrid Cloud w/ Outpost**: Seamless experience, in case of increase traffic can run resources on cloud, in what's called cloud bursts
+    - Local Data Storage Data Sovereignty
+    - **Fully manaaged by AWS** AWS delivers,installs, and maintains outposts. Amazon handles software patches and updates just like in the cloud.
+    - **Low Latency** integrates with onpremises data
+
 ### How do Availability Zones within AWS Regions contribute to disaster recovery and high availability?
+  - AZ provide redundancy incase of failure of a seperate discrete outage at a another AZ. 
+  - **Load Balancing with low latency**
+  - Cost efficent avoid the higher cost of cross region data
+  - **Simplifies audits and reduces complexity** for data sovereignty while still providing fault tolerance and disaster recovery capabilites.
 ### How do AWS Edge locations and Amazon CloudFront improve content delivery?
   Edge Locations cache resources closer to custoemers so they get information quicker.
 ### What is an API in the context of AWS?
 Application Programming Interface, predertermined way to interact with AWS services
 ex. Launch EC2 instance
 ### What is the primary method of interacting with AWS services?
-
+  - AWS Management Console
+    - USECASE:Best for beginners creating s3 buckets, and launching ec2 instances, managing IAM USERS
+  - AWS SDK & API
+    - Interact with AWS services programtically
+    - RESTful API
+    - USECASE: Accessing S3 storage, launching EC2 instances, or interacting with databases like DynamoDB
+  - **Infrastructure as Code(IOC)** Tools
+    - Define AWS infrastructure with JSON and YAML. Automates 
+    - Terraform
+    - USECASE: Managing complex enviroments, ensuring consistency, and automating the deployment of resources
+  - AWS CLI
+    - Script and automate tasks by executing commands directly from the terminal
+    - Flexible: Helpful for repetitive tasks and CI/CD integration
+    - USECASE: Suitable for Developers, DevOps Engineers, System adminstrators
 ### What are the main ways to interact with AWS services?
 ### Why is automation important in cloud deployment?
+  - Efficency
+  - Cost Management
+    - **Optimize Resource Usage** Ensure you're only using what you need
+    - Budget adherance
+  - Security and Compliance
+      - Consistent security practices
+  - **Consistency and Reliability**
+
+    - Compliance Automation
+  - **Scalability**
+    - Scale resources up or down based on demand
+  - Disaster Recovery Resilience
+    - Automated failover executed quickly and efficently.
+  - Continuos Integration/ Continuos Deployment
 ### What is the primary advantage of using AWS Elastic Beanstalk over manual methods like the AWS Management Console?
 ### What is AWS Elastic Beanstalk used for?
 Elastic Beanstalk is a service for deploying and scaling web applications and services. Upload your code and Elastic Beanstalk automatically handles the deployment—from capacity provisioning, load balancing, and auto scaling to application health monitoring.
@@ -178,14 +238,55 @@ With CloudFormation we can modify and update the resources in your existing stac
 ### Which AWS services automatically run across multiple Availability Zones?
 ### What is the recommended best practice for deploying infrastructure in AWS?
 
-    What is Amazon EC2?
-    What is Amazon EC2 and its primary benefits?
-    What is a Security Group in EC2?
-    What are the four main purchasing options for EC2 instances, and what are their key characteristics?
-    How does EC2 pricing work?
-    What is an Amazon Machine Image (AMI)?
-    How does EC2 integrate with other AWS services?
-    What are the different computing models available in AWS?
+####  What is Amazon EC2?
+    - A webservice from AWS that creates scalable virtual servers
+####   What is Amazon EC2 and its primary benefits?
+  A web service from AWS that creates scalable virtual servers. Pay only for the compute time used. Auto scaling **Adjusting the number of instances, based on conditions. Can handle traffic automatical**
+
+####  What is a Security Group in EC2?
+    - A virtual firewall
+    - controls inbound and outbound traffic from EC2 server instance
+#### What are the four main purchasing options for EC2 instances, and what are their key characteristics?
+   - **On Demand Instance**
+    - For unpredictable, short term workload where flexibility is key.
+   - **Reserved Instances**
+    - For long term, steady state with predictable usage
+   - **Spot Instances**
+    - For cost sensitive, workloads that can handle interruptions
+   - **Saving Plans**
+    - More flexible, can get discount for consistent usage of **1 year and 3 year** terms
+    
+  #### How does EC2 pricing work?
+    - **Pay As You Go**
+      - BASED ON
+        - Instance Type
+        - Purchasing Options
+        - Data Transfer Costs
+        - Stoage Costs
+   #### What is an Amazon Machine Image (AMI)?
+    - Virtual Computer
+    - Runs an OS (Linux, Windows, Unix)
+    - Can come preconfigured with applications
+   #### How does EC2 integrate with other AWS services?
+    - **Amazon RDS** EC2 connect with RDS to manage and query database
+      - Offload database management to RDS run logic on EC2
+    - **Amazon S3** Use it for storing and retreiving data
+      - Host Static Websites, media files, or back ups in S3
+    - EC2 instances run within a VPC
+    - **Amazon CloudWatch** Detailed monitoring of instance performance metrics I/O, network traffic, CPU
+    - **Elastic Load Balancing** Load distribution accross EC2 instances. Ensures high availability and reliability.
+   #### What are the different computing models available in AWS?
+    - Compute Instance
+      - ec2
+    - Edge Instance 
+      - Extends AWS functionality to local devices
+    - High Performance Computing
+      - EC2 instances for high performance computing tasks
+    - Batch Processing
+      - Efficently run batch computing workloads at any scale
+      - USECASE: Scientic processing, data analysis
+    - Platform as a Service
+    - Container Based Computing
     What is an instance and its use cases?
     What are containers and their advantages?
     What is serverless computing and its use cases?
